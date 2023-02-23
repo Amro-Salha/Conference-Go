@@ -13,12 +13,23 @@ function createCard(title, description, pictureUrl, start, end, location){
     </div>`
 }
 
+function alertError(){
+    return`
+    <div class="alert alert-danger" role="alert">
+        Error retrieving data; try again later
+    </div>`
+}
+
+
+
 window.addEventListener('DOMContentLoaded', async () => {
     const url = 'http://localhost:8000/api/conferences/'
     try {
         const response = await fetch(url)
 
         if (!response.ok){
+            const container = document.querySelector('.container')
+            container.innerHTML = alertError()
             throw new Error('Response not ok')
         }else {
             const data = await response.json()
@@ -55,6 +66,8 @@ window.addEventListener('DOMContentLoaded', async () => {
         }
 
     }catch (error){
+        const container = document.querySelector('.container')
+        container.innerHTML = alertError()
         console.error('error', error)
     }
 });
