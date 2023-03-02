@@ -64,7 +64,7 @@ function AttendeeForm( ) {
         <div className="my-5">
         <div className="row">
             <div className="col col-sm-auto">
-            <img width="300" className="bg-white rounded shadow d-block mx-auto mb-4" src="./logo.svg"/>
+            <img width="300" className="bg-white rounded shadow d-block mx-auto mb-4" src='/logo.svg' />
             </div>
             <div className="col">
             <div className="card shadow">
@@ -99,13 +99,13 @@ function AttendeeForm( ) {
                     <div className="col">
                         <div className="form-floating mb-3">
                         <input onChange={handleFormChange} value={formData.name} required placeholder="Your full name" type="text" id="name" name="name" className="form-control"/>
-                        <label htmlFor="name">Your full name</label>
+                        <label htmlFor="name">Full name</label>
                         </div>
                     </div>
                     <div className="col">
                         <div className="form-floating mb-3">
                         <input onChange={handleFormChange} required value={formData.email} placeholder="Your email address" type="email" id="email" name="email" className="form-control"/>
-                        <label htmlFor="email">Your email address</label>
+                        <label htmlFor="email"> Email address</label>
                         </div>
                     </div>
                     </div>

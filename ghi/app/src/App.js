@@ -17,20 +17,13 @@ function App(props) {
     <Nav />
     <div className='container'>
       <Routes>
-
-        <Route index element= {<MainPage />} />
+        <Route path="" element= {<MainPage />} />
         <Route path="conferences/new" element={<ConferenceForm/>}/>
         <Route path="attendees/new" element={<AttendeeForm/>}/>
         <Route path="locations/new" element={<LocationForm/>}/>
         <Route path="attendees" element={<AttendeesList attendees={props.attendees}/>}/>
         <Route path="presentations/new" element={<PresentationForm />}/>
       </Routes>
-
-
-      {/* <AttendeeForm /> */}
-      {/* <ConferenceForm />
-      <LocationForm />
-      <AttendeesList attendees = {props.attendees}/> */}
     </div>
     </BrowserRouter>
     </>
